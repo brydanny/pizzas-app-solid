@@ -9,7 +9,7 @@ export class AppController {
   getHello(): string {
     return this.appService.getHello();
   }
-  @Get('/pizzas/')
+  @Get('/asd')
   getPizzas() {
     return this.appService.getPizzas();
   }
