@@ -22,6 +22,7 @@ export class PizzasService {
     const apiKey = this.configService.get('API_KEY');
     const dbName = this.configService.get('DATABASE_NAME');
     this.logger.info(apiKey, dbName);
+    this.logger.info(`register-pass: ${apiKey} - ${dbName}`);
     return this.pizzaModel.find().exec();
   }
   create(data: CreatePizzaDto) {

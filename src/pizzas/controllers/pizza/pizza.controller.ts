@@ -6,10 +6,10 @@ import { PizzasService } from '../../services/pizzas.service';
 export class PizzaController {
   constructor(private pizzasService: PizzasService) {}
   @Get()
-  getPizzas(): string {
-    console.log("0001");
-    //return this.pizzasService.findAll();
-    return 'Hola desde modulo de pizzas';
+  getPizzas() {
+    console.log('0001');
+    return this.pizzasService.findAll();
+    //return 'Hola desde modulo de pizzas';
   }
   @Post()
   create(@Body() payload: CreatePizzaDto) {
