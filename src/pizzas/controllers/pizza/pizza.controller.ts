@@ -1,4 +1,9 @@
-import { Controller } from '@nestjs/common';
+import { Controller, Get } from '@nestjs/common';
 
 @Controller('pizza')
-export class PizzaController {}
+export class PizzaController {
+  @Get()
+  getPizzas(): string {
+    return 'lista de pizzas';
+  }
+}
