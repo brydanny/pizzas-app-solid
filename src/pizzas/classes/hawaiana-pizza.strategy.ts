@@ -7,14 +7,16 @@ export class HawaianaPizzaStrategy implements PizzaStrategy {
   private type: string;
   private name: string;
   private specialInstructions: string;
+  private quantity: number;
 
-  constructor(size: string, specialInstructions: string) {
+  constructor(size: string, specialInstructions: string, quantity: number) {
     this.toppings = ['Piña', 'Jamón', 'Queso Mozzarella', 'Salsa de Tomate'];
     this.size = size;
     this.crust = 'ORIGINAL';
     this.specialInstructions = specialInstructions;
     this.type = 'PREESTABLECIDO';
     this.name = 'HAWAIANA';
+    this.quantity = quantity;
   }
 
   prepare(): any {
@@ -25,11 +27,13 @@ export class HawaianaPizzaStrategy implements PizzaStrategy {
       toppings: this.toppings,
       specialInstructions: this.specialInstructions,
       status: 'PREPARADO',
+      name: this.name,
+      quantity: this.quantity,
     };
     console.log(
-      `Preparando pizza ${this.name} con ingredientes: ${this.toppings.join(
-        ', ',
-      )}`,
+      `Preparando ${this.quantity} pizzas ${
+        this.name
+      } con ingredientes: ${this.toppings.join(', ')}`,
     );
     return newPizza;
   }

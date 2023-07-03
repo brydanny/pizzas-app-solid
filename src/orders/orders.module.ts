@@ -4,6 +4,7 @@ import { OrderController } from './controllers/order/order.controller';
 import { OrdersService } from './services/orders.service';
 import { Order, OrderSchema } from './entities/order.entity';
 import { PizzasModule } from '../pizzas/pizzas.module';
+import { PromotionsModule } from '../promotions/promotions.module';
 
 @Module({
   imports: [
@@ -14,6 +15,7 @@ import { PizzasModule } from '../pizzas/pizzas.module';
       },
     ]),
     PizzasModule,
+    PromotionsModule,
   ],
   controllers: [OrderController],
   providers: [OrdersService],

@@ -7,6 +7,7 @@ export class CreateOrderDto {
   readonly quantity: number;
   readonly specialInstructions: string;
   readonly status?: string;
+  readonly delivery?: number;
   readonly totalPrice?: number;
 }
 export class UpdateOrderDto {
@@ -18,5 +19,6 @@ export class UpdateOrderDto {
   readonly quantity?: number;
   readonly specialInstructions?: string;
   readonly status?: string;
+  readonly delivery?: number;
   readonly totalPrice?: number;
 }

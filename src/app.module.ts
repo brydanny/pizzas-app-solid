@@ -6,6 +6,7 @@ import { PizzasModule } from './pizzas/pizzas.module';
 import { OrdersModule } from './orders/orders.module';
 import { DatabaseModule } from './database/database/database.module';
 import { environments } from '../environments';
+import { PromotionsModule } from './promotions/promotions.module';
 import config from '../config';
 
 @Module({
@@ -22,6 +23,7 @@ import config from '../config';
     PizzasModule,
     OrdersModule,
     DatabaseModule,
+    PromotionsModule,
   ],
   controllers: [AppController],
   providers: [AppService],
